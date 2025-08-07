@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainable Living Tracker - SDG 12</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-leaf"></i>
+                    <h1>Sustainable Living Tracker</h1>
+                </div>
+                <p class="subtitle">Supporting SDG 12: Responsible Consumption and Production</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Dashboard Section -->
+            <section class="dashboard">
+                <div class="dashboard-header">
+                    <h2>Your Sustainability Dashboard</h2>
+                    <div class="date-display" id="currentDate"></div>
+                </div>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-recycle"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>Carbon Footprint</h3>
+                            <div class="stat-value" id="carbonFootprint">0 kg CO₂</div>
+                            <div class="stat-change positive">-15% this week</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-tint"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>Water Saved</h3>
+                            <div class="stat-value" id="waterSaved">0 L</div>
+                            <div class="stat-change positive">+25% this week</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-trash"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>Waste Reduced</h3>
+                            <div class="stat-value" id="wasteReduced">0 kg</div>
+                            <div class="stat-change positive">+30% this week</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>Sustainability Score</h3>
+                            <div class="stat-value" id="sustainabilityScore">85/100</div>
+                            <div class="stat-change positive">+5 points</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Daily Actions Section -->
+            <section class="daily-actions">
+                <h2>Today's Sustainable Actions</h2>
+                <div class="actions-grid">
+                    <div class="action-card" data-action="transport">
+                        <div class="action-icon">
+                            <i class="fas fa-bicycle"></i>
+                        </div>
+                        <h3>Transportation</h3>
+                        <p>Choose sustainable transport options</p>
+                        <button class="action-btn" onclick="logAction('transport')">Log Action</button>
+                    </div>
+                    
+                    <div class="action-card" data-action="energy">
+                        <div class="action-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>Energy Usage</h3>
+                        <p>Reduce energy consumption</p>
+                        <button class="action-btn" onclick="logAction('energy')">Log Action</button>
+                    </div>
+                    
+                    <div class="action-card" data-action="water">
+                        <div class="action-icon">
+                            <i class="fas fa-tint"></i>
+                        </div>
+                        <h3>Water Conservation</h3>
+                        <p>Save water in daily activities</p>
+                        <button class="action-btn" onclick="logAction('water')">Log Action</button>
+                    </div>
+                    
+                    <div class="action-card" data-action="waste">
+                        <div class="action-icon">
+                            <i class="fas fa-recycle"></i>
+                        </div>
+                        <h3>Waste Management</h3>
+                        <p>Reduce, reuse, and recycle</p>
+                        <button class="action-btn" onclick="logAction('waste')">Log Action</button>
+                    </div>
+                    
+                    <div class="action-card" data-action="food">
+                        <div class="action-icon">
+                            <i class="fas fa-apple-alt"></i>
+                        </div>
+                        <h3>Sustainable Food</h3>
+                        <p>Choose local and seasonal food</p>
+                        <button class="action-btn" onclick="logAction('food')">Log Action</button>
+                    </div>
+                    
+                    <div class="action-card" data-action="shopping">
+                        <div class="action-icon">
+                            <i class="fas fa-shopping-bag"></i>
+                        </div>
+                        <h3>Conscious Shopping</h3>
+                        <p>Buy sustainable products</p>
+                        <button class="action-btn" onclick="logAction('shopping')">Log Action</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Educational Content -->
+            <section class="education">
+                <h2>Learn About SDG 12</h2>
+                <div class="education-grid">
+                    <div class="education-card">
+                        <h3>What is SDG 12?</h3>
+                        <p>Sustainable Development Goal 12 aims to ensure sustainable consumption and production patterns. It focuses on reducing waste, promoting resource efficiency, and encouraging sustainable lifestyles.</p>
+                    </div>
+                    
+                    <div class="education-card">
+                        <h3>Key Targets</h3>
+                        <ul>
+                            <li>Reduce food waste by 50% by 2030</li>
+                            <li>Achieve sustainable management of natural resources</li>
+                            <li>Reduce waste generation through prevention and recycling</li>
+                            <li>Encourage companies to adopt sustainable practices</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="education-card">
+                        <h3>How You Can Help</h3>
+                        <ul>
+                            <li>Choose products with minimal packaging</li>
+                            <li>Buy local and seasonal food</li>
+                            <li>Use public transport or carpool</li>
+                            <li>Reduce energy consumption at home</li>
+                            <li>Recycle and compost waste</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Progress Tracking -->
+            <section class="progress">
+                <h2>Your Progress</h2>
+                <div class="progress-chart">
+                    <canvas id="progressChart" width="400" height="200"></canvas>
+                </div>
+                <div class="achievements">
+                    <h3>Recent Achievements</h3>
+                    <div class="achievement-list" id="achievementList">
+                        <!-- Achievements will be populated by JavaScript -->
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2025 Sustainable Living Tracker. Supporting The Indian National Sustainable Development Goals.</p>
+            <p>Learn more about SDGs at <a href="https://sdgs.un.org/goals" target="_blank">sdgs.un.org/goals</a></p>
+        </footer>
+    </div>
+
+    <!-- Modal for Action Logging -->
+    <div id="actionModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Log Your Sustainable Action</h2>
+            <form id="actionForm">
+                <div class="form-group">
+                    <label for="actionType">Action Type:</label>
+                    <select id="actionType" required>
+                        <option value="">Select an action...</option>
+                        <option value="transport">Sustainable Transportation</option>
+                        <option value="energy">Energy Conservation</option>
+                        <option value="water">Water Conservation</option>
+                        <option value="waste">Waste Reduction</option>
+                        <option value="food">Sustainable Food Choice</option>
+                        <option value="shopping">Conscious Shopping</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="actionDescription">Description:</label>
+                    <textarea id="actionDescription" placeholder="Describe what you did..." required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="impactValue">Impact Value:</label>
+                    <input type="number" id="impactValue" placeholder="Enter impact value" required>
+                </div>
+                <button type="submit" class="submit-btn">Log Action</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="demo-data.js"></script>
+</body>
+</html> 
